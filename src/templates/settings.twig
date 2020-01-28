@@ -1,0 +1,52 @@
+{# @var craft \craft\web\twig\variables\CraftVariable #}
+{#
+/**
+ * IMIS API Integration plugin for Craft CMS 3.x
+ *
+ * IMIS API Integration Settings.twig
+ *
+ * @author    Daniel Gonzalez Adarve
+ * @copyright Copyright (c) 2019 Thirst Creative
+ * @link      https://www.thirstcreative.com.au
+ * @package   ImisApiIntegration
+ * @since     0.0.1
+ */
+#}
+
+{% import "_includes/forms" as forms %}
+
+{% do view.registerAssetBundle("thirstcreative\\imisapiintegration\\assetbundles\\imisapiintegration\\ImisApiIntegrationAsset") %}
+
+<div class="status-container">
+  {% if settings.imisUsername|length and settings.imisPassword|length %}
+    <div class="status live"></div>Perfect! You're connection details are saved🎉<br>
+  {% else %}
+    <div class="status expired"></div>Oh no, you're currently not connected to iMIS	☹️!
+  {% endif %}
+</div>
+
+<p>If your iMIS username or password have changed please save them so the application can request a new Authentication token!</p>
+
+{{ forms.textField({
+    label: 'iMIS URL',
+    instructions: 'Enter your IMIS url.',
+    id: 'imisURL',
+    name: 'imisURL',
+    value: settings['imisURL']})
+}}
+
+{{ forms.textField({
+    label: 'iMIS Username',
+    instructions: 'Enter your IMIS username.',
+    id: 'imisUsername',
+    name: 'imisUsername',
+    value: settings['imisUsername']})
+}}
+
+{{ forms.passwordField({
+  label: 'iMIS Password',
+  instructions: 'Enter your IMIS password.',
+  id: 'imisPassword',
+  name: 'imisPassword',
+  value: settings['imisPassword']})
+}}

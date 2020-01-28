@@ -1,0 +1,27 @@
+/**
+ * IMIS API Integration plugin for Craft CMS
+ *
+ * IMIS API Integration CSS
+ *
+ * @author    Daniel Gonzalez Adarve
+ * @copyright Copyright (c) 2019 Thirst Creative
+ * @link      https://www.thirstcreative.com.au
+ * @package   ImisApiIntegration
+ * @since     0.0.1
+ */
+
+.status-container {
+  background: #f6f7f9;
+  padding: 20px;
+  border-radius: 3px;
+  margin-bottom: 20px;
+  border: 1px solid #e3e5e8;
+  font-size: 15px;
+}
+
+.alert {
+  margin-bottom: 20px;
+  background-color: #fff7db;
+  padding: 10px;
+  border-radius: 3px;
+}

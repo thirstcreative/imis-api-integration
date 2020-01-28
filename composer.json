@@ -1,0 +1,45 @@
+{
+    "name": "thirstcreative/imis-api-integration",
+    "description": "integrates the IMIS API with CraftCMS",
+    "type": "craft-plugin",
+    "version": "0.0.1",
+    "keywords": [
+        "craft",
+        "cms",
+        "craftcms",
+        "craft-plugin",
+        "imis api integration"
+    ],
+    "support": {
+        "docs": "https://github.com/imis-api-integration/imis-api-integration/blob/master/README.md",
+        "issues": "https://github.com/imis-api-integration/imis-api-integration/issues"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Daniel Gonzalez Adarve",
+            "homepage": "https://www.thirstcreative.com.au"
+        }
+    ],
+    "require": {
+        "craftcms/cms": "^3.0.0-RC1",
+        "guzzlehttp/guzzle": "^6.5",
+        "tightenco/collect": "*"
+    },
+    "autoload": {
+        "psr-4": {
+          "thirstcreative\\imisapiintegration\\": "src/"
+        }
+    },
+    "extra": {
+        "name": "IMIS API Integration",
+        "handle": "imis-api-integration",
+        "hasCpSettings": true,
+        "hasCpSection": false,
+        "changelogUrl": "https://raw.githubusercontent.com/imis-api-integration/imis-api-integration/master/CHANGELOG.md",
+        "components": {
+            "imisapiservice": "thirstcreative\\imisapiintegration\\services\\ImisApiService"
+        },
+        "class": "thirstcreative\\imisapiintegration\\ImisApiIntegration"
+    }
+}
