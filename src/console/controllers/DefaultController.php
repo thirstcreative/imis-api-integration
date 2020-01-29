@@ -232,7 +232,6 @@ class DefaultController extends Controller
             'sectionId'     => $section->id,
             'typeId'        => $entryType->id,
             'fieldLayoutId' => $entryType->fieldLayoutId,
-            'authorId'      => 3,
             'title'         => $OrganizationName,
             'postDate'      => new DateTime(),
           ]);
