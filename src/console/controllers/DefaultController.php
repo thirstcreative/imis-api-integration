@@ -220,7 +220,6 @@ class DefaultController extends Controller
         if(!is_null($filtered)){
           // Update Entry
           $entry = $filtered;
-          $entry->title = $OrganizationName;
         }else{
           // Insert Entry
           // Figure out the section & entry type
